@@ -3,34 +3,21 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import { decoding, encoding } from 'lib0'
 import type { Decoder } from 'lib0/decoding'
 import type { Awareness } from 'y-protocols/awareness'
-import {
-  applyAwarenessUpdate,
-  encodeAwarenessUpdate
-} from 'y-protocols/awareness'
+import { applyAwarenessUpdate, encodeAwarenessUpdate } from 'y-protocols/awareness'
 
 import { MessageType } from './message-type.enum'
+import { readVarUint8Array } from 'lib0/decoding'
+import { createEncoder, toUint8Array, writeVarUint, writeVarUint8Array } from 'lib0/encoding'
 
-export class AwarenessUpdateMessage {
-  public static apply(decoder: Decoder, awareness: Awareness): void {
-    applyAwarenessUpdate(awareness, decoding.readVarUint8Array(decoder), this)
-  }
+export function applyAwarenessUpdateMessage(decoder: Decoder, awareness: Awareness, origin: unknown): void {
+  applyAwarenessUpdate(awareness, readVarUint8Array(decoder), origin)
+}
 
-  public static encode(
-    awareness: Awareness,
-    updatedClientIds?: number[]
-  ): Uint8Array {
-    const encoder = encoding.createEncoder()
-    encoding.writeVarUint(encoder, MessageType.AWARENESS_UPDATE)
-    encoding.writeVarUint8Array(
-      encoder,
-      encodeAwarenessUpdate(
-        awareness,
-        updatedClientIds ?? [...awareness.getStates().keys()]
-      )
-    )
-    return encoding.toUint8Array(encoder)
-  }
+export function encodeAwarenessUpdateMessage(awareness: Awareness, updatedClientIds: number[]): Uint8Array {
+  const encoder = createEncoder()
+  writeVarUint(encoder, MessageType.AWARENESS_UPDATE)
+  writeVarUint8Array(encoder, encodeAwarenessUpdate(awareness, updatedClientIds))
+  return toUint8Array(encoder)
 }

@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "esnext",
     "removeComments": true,
     "preserveConstEnums": true,
     "lib": [
-      "es2019",
+      "es2020",
       "dom"
     ],
     "declaration": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "CommonJS",
+    "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "outDir": "dist",
-    "rootDir": "./src/",
+    "outDir": "dist/mjs",
+    "rootDir": "./src",
     "allowJs": true,
-    "jsx": "react-jsx"
+    "sourceMap": true
   },
-  "include": ["src"]
+  "include": ["./src"],
+  "exclude": ["./dist", "**/*.test.*", "**/__mocks__/*", "**/__tests__/*"]
 }
