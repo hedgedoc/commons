@@ -1,0 +1,68 @@
+{
+  "name": "@hedgedoc/realtime-communication",
+  "version": "0.0.1",
+  "description": "Contains common code for realtime communication",
+  "author": "The HedgeDoc Authors",
+  "license": "AGPL-3.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "yarn format && yarn lint",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier -c \"{src,test}/**/*.{ts,tsx,js}\"",
+    "format:fix": "prettier -w \"{src,test}/**/*.{ts,tsx,js}\""
+  },
+  "files": [
+    "LICENSES/*",
+    "package.json",
+    "README.md",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hedgedoc/realtime-communication.git"
+  },
+  "dependencies": {
+    "typescript": "^4.7.3",
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^8.7.0",
+    "yjs": "^13.5.38",
+    "lib0": "^0.2.51",
+    "typed-emitter": "^2.1.0",
+    "y-protocols": "^1.0.5"
+  },
+  "devDependencies": {
+    "ts-jest": "^28.0.4",
+    "jest": "^28.1.0",
+    "@types/jest": "^28.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2"
+  },
+  "prettier": {
+    "parser": "typescript",
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "always"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "testPathIgnorePatterns": [
+      "/dist/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
