@@ -3,3 +3,6 @@ Upstream-Name: html-to-react
 Upstream-Contact: The HedgeDoc developers <license@hedgedoc.org>
 Source: https://github.com/hedgedoc/html-to-react
 
+Files: .yarn/**
+Copyright: Yarn contributors
+License: BSD-2-Clause
