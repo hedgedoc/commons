@@ -1,6 +1,6 @@
 {
   "name": "@hedgedoc/realtime",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Contains common code for realtime communication",
   "author": "The HedgeDoc Authors",
   "license": "AGPL-3.0",
@@ -33,7 +33,7 @@
     "LICENSES/*",
     "package.json",
     "README.md",
-    "dist/*"
+    "dist/**"
   ],
   "repository": {
     "type": "git",
