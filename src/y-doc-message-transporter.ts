@@ -53,6 +53,13 @@ export abstract class YDocMessageTransporter extends (EventEmitter as new () => 
     this.emit('disconnected')
   }
 
+  protected markAsSynced(): void {
+    if (!this.synced) {
+      this.synced = true
+      this.emit('synced')
+    }
+  }
+
   protected decodeMessage(buffer: ArrayBuffer): void {
     const data = new Uint8Array(buffer)
     const decoder = new Decoder(data)
@@ -67,10 +74,7 @@ export abstract class YDocMessageTransporter extends (EventEmitter as new () => 
         break
       case MessageType.COMPLETE_DOCUMENT_STATE_ANSWER:
         applyDocumentUpdateMessage(decoder, this.doc, this)
-        if (!this.synced) {
-          this.synced = true
-          this.emit('synced')
-        }
+        this.markAsSynced()
         break
       case MessageType.COMPLETE_AWARENESS_STATE_REQUEST:
         this.send(encodeAwarenessUpdateMessage(this.awareness, [...this.awareness.getStates().keys()]))
