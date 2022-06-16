@@ -44,7 +44,7 @@
     "lib0": "0.2.51",
     "typed-emitter": "2.1.0",
     "y-protocols": "1.0.5",
-    "yjs": "13.5.38"
+    "yjs": "13.5.39"
   },
   "devDependencies": {
     "@digitak/tsc-esm": "3.1.2",
