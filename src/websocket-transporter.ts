@@ -9,6 +9,7 @@ import WebSocket from 'isomorphic-ws'
 import { ConnectionKeepAliveHandler } from './connection-keep-alive-handler'
 import { Doc } from 'yjs'
 import { Awareness } from 'y-protocols/awareness'
+import { CLOSING } from 'ws'
 
 export class WebsocketTransporter extends YDocMessageTransporter {
   private websocket: WebSocket | undefined
@@ -30,6 +31,11 @@ export class WebsocketTransporter extends YDocMessageTransporter {
       console.info('Socket closed')
       this.onClose()
     })
+    if (websocket.readyState === WebSocket.OPEN) {
+      this.onOpen()
+    } else {
+      websocket.addEventListener('open', this.onOpen.bind(this))
+    }
   }
 
   public disconnect(): void {
@@ -38,7 +44,7 @@ export class WebsocketTransporter extends YDocMessageTransporter {
 
   public send(content: Uint8Array): void {
     if (this.websocket?.readyState !== WebSocket.OPEN) {
-      console.error("Can't send message over non-open socket")
+      console.error('Can\'t send message over non-open socket')
       return
     }
 
