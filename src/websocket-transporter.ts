@@ -9,7 +9,6 @@ import WebSocket from 'isomorphic-ws'
 import { ConnectionKeepAliveHandler } from './connection-keep-alive-handler'
 import { Doc } from 'yjs'
 import { Awareness } from 'y-protocols/awareness'
-import { CLOSING } from 'ws'
 
 export class WebsocketTransporter extends YDocMessageTransporter {
   private websocket: WebSocket | undefined
@@ -20,7 +19,7 @@ export class WebsocketTransporter extends YDocMessageTransporter {
   }
 
   public setupWebsocket(websocket: WebSocket) {
-    if (websocket.readyState === WebSocket.CLOSED || websocket.readyState === CLOSING) {
+    if (websocket.readyState === WebSocket.CLOSED || websocket.readyState === WebSocket.CLOSING) {
       throw new Error(`Socket is closed`)
     }
     this.websocket = websocket
