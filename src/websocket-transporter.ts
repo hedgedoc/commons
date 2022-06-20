@@ -20,6 +20,9 @@ export class WebsocketTransporter extends YDocMessageTransporter {
   }
 
   public setupWebsocket(websocket: WebSocket) {
+    if (websocket.readyState === WebSocket.CLOSED || websocket.readyState === CLOSING) {
+      throw new Error(`Socket is closed`)
+    }
     this.websocket = websocket
     websocket.binaryType = 'arraybuffer'
     websocket.addEventListener('message', (event) => this.decodeMessage(event.data as ArrayBuffer))
@@ -44,7 +47,7 @@ export class WebsocketTransporter extends YDocMessageTransporter {
 
   public send(content: Uint8Array): void {
     if (this.websocket?.readyState !== WebSocket.OPEN) {
-      console.error('Can\'t send message over non-open socket')
+      console.error("Can't send message over non-open socket")
       return
     }
 
