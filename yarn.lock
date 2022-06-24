@@ -389,23 +389,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@digitak/grubber@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@digitak/grubber@npm:3.1.1"
-  checksum: 5fb6879a8435b93a7c79c6da0540deacd993b44c899c72a858d4b6e82424530f2d096f0efae94c449ada56906f616a6fd90b8b5f7c7bfd61246d80718c2551c8
+"@digitak/grubber@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@digitak/grubber@npm:3.1.2"
+  checksum: 676cc7693292990d20539add8deac8013a57294924c910c650627dfe9d854881eadf53a37663600d067ac539bda06ecd5fd1a162f80abb6e78287b45a1f27572
   languageName: node
   linkType: hard
 
-"@digitak/tsc-esm@npm:3.1.2":
-  version: 3.1.2
-  resolution: "@digitak/tsc-esm@npm:3.1.2"
+"@digitak/tsc-esm@npm:3.1.3":
+  version: 3.1.3
+  resolution: "@digitak/tsc-esm@npm:3.1.3"
   dependencies:
-    "@digitak/grubber": ^3.1.1
+    "@digitak/grubber": ^3.1.2
     fast-glob: ^3.2.5
     relaxed-json: ^1.0.3
   bin:
     tsc-esm: binary/tsc-esm.js
-  checksum: ad74715a534b1747183766ffda78b0cd06ef8629f944d74e6bc1230c48a8f86b35176e1f16bc3a68627927ea4e810c774a2c654f6a8db0bbd25342163d7ce8df
+  checksum: 1dd713331cba283091d5c08dbcc24b69e5a3c447658ca30f712610d984a217044b2b5dedddbcfae742cf5f2d3a4fcd7a232201835d84c053b64b670a72349f5c
   languageName: node
   linkType: hard
 
@@ -437,7 +437,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hedgedoc/realtime@workspace:."
   dependencies:
-    "@digitak/tsc-esm": 3.1.2
+    "@digitak/tsc-esm": 3.1.3
     "@types/jest": 28.1.3
     "@types/ws": 8.5.3
     "@typescript-eslint/eslint-plugin": 5.29.0
