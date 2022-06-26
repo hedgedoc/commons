@@ -46,15 +46,14 @@ export class WebsocketTransporter extends YDocMessageTransporter {
 
   public send(content: Uint8Array): void {
     if (this.websocket?.readyState !== WebSocket.OPEN) {
-      console.error("Can't send message over non-open socket")
-      return
+      throw new Error("Can't send message over non-open socket")
     }
 
     try {
       this.websocket.send(content)
     } catch (error: unknown) {
-      console.error('Error while sending message', error)
       this.disconnect()
+      throw error
     }
   }
 }
