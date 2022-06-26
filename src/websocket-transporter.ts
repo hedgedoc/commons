@@ -25,14 +25,8 @@ export class WebsocketTransporter extends YDocMessageTransporter {
     this.websocket = websocket
     websocket.binaryType = 'arraybuffer'
     websocket.addEventListener('message', (event) => this.decodeMessage(event.data as ArrayBuffer))
-    websocket.addEventListener('error', (event) => {
-      console.error('Websocket error occured', event.error)
-      this.disconnect()
-    })
-    websocket.addEventListener('close', () => {
-      console.info('Socket closed')
-      this.onClose()
-    })
+    websocket.addEventListener('error', () => this.disconnect())
+    websocket.addEventListener('close', () => this.onClose())
     if (websocket.readyState === WebSocket.OPEN) {
       this.onOpen()
     } else {
