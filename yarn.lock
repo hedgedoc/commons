@@ -445,7 +445,7 @@ __metadata:
     eslint: 8.18.0
     eslint-config-prettier: 8.5.0
     eslint-plugin-jest: 26.5.3
-    isomorphic-ws: 4.0.1
+    isomorphic-ws: 5.0.0
     jest: 28.1.2
     lib0: 0.2.51
     prettier: 2.7.1
@@ -2533,12 +2533,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isomorphic-ws@npm:4.0.1":
-  version: 4.0.1
-  resolution: "isomorphic-ws@npm:4.0.1"
+"isomorphic-ws@npm:5.0.0":
+  version: 5.0.0
+  resolution: "isomorphic-ws@npm:5.0.0"
   peerDependencies:
     ws: "*"
-  checksum: d7190eadefdc28bdb93d67b5f0c603385aaf87724fa2974abb382ac1ec9756ed2cfb27065cbe76122879c2d452e2982bc4314317f3d6c737ddda6c047328771a
+  checksum: e20eb2aee09ba96247465fda40c6d22c1153394c0144fa34fe6609f341af4c8c564f60ea3ba762335a7a9c306809349f9b863c8beedf2beea09b299834ad5398
   languageName: node
   linkType: hard
 
