@@ -61,15 +61,5 @@
     "typescript": "4.7.4",
     "ws": "8.8.0"
   },
-  "prettier": {
-    "parser": "typescript",
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "semi": false,
-    "tabWidth": 2,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "arrowParens": "always"
-  },
   "packageManager": "yarn@3.2.1"
 }
