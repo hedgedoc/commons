@@ -6,9 +6,15 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig-eslint.json"]
+    "project": [
+      "./tsconfig-eslint.json"
+    ]
   },
-  "plugins": ["@typescript-eslint", "jest"],
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "prettier"
+  ],
   "env": {
     "jest": true,
     "jest/globals": true
@@ -17,9 +23,11 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
