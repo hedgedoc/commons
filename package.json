@@ -1,6 +1,6 @@
 {
   "name": "@hedgedoc/realtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Contains common code for realtime communication",
   "author": "The HedgeDoc Authors",
   "license": "AGPL-3.0",
