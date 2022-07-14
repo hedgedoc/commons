@@ -9,6 +9,7 @@ import { MessageType } from './messages/message-type.enum'
 import { encodeDocumentUpdateMessage } from './messages/document-update-message'
 import { YDocMessageTransporter } from './y-doc-message-transporter'
 import { Awareness } from 'y-protocols/awareness'
+import { describe, expect, it } from '@jest/globals'
 
 class InMemoryMessageTransporter extends YDocMessageTransporter {
   private otherSide: InMemoryMessageTransporter | undefined
