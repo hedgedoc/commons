@@ -50,4 +50,8 @@ export class WebsocketTransporter extends YDocMessageTransporter {
       throw error
     }
   }
+
+  public isWebSocketOpen(): boolean {
+    return this.websocket?.readyState === WebSocket.OPEN
+  }
 }
