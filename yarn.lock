@@ -461,7 +461,7 @@ __metadata:
     ts-jest: 28.0.8
     typed-emitter: ^2.0.0
     typescript: 4.7.4
-    ws: 8.8.1
+    ws: ^8.0.0
     y-protocols: ^1.0.0
     yjs: ^13.0.0
   languageName: unknown
@@ -4540,7 +4540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:8.8.1":
+"ws@npm:^8.0.0":
   version: 8.8.1
   resolution: "ws@npm:8.8.1"
   peerDependencies:
