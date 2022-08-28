@@ -16,7 +16,7 @@ To build a publishable build you'll need [`mmv`](https://wiki.ubuntuusers.de/mmv
 
 We welcome contributions!
 Have a look at our [contribution docs](CONTRIBUTING.md) to find out how you can help. If you want to contribute to
-HedgeDoc 2, please join our [development chat][matrix.org-dev-url].
+HedgeDoc 2, please join our [development chat](https://chat.hedgedoc.org/dev).
 
 # License
 
