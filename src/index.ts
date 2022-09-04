@@ -12,6 +12,10 @@ export { applyDocumentUpdateMessage, encodeDocumentUpdateMessage } from './messa
 export { encodeCompleteAwarenessStateRequestMessage } from './messages/complete-awareness-state-request-message'
 export { encodeCompleteDocumentStateRequestMessage } from './messages/complete-document-state-request-message'
 export { encodeCompleteDocumentStateAnswerMessage } from './messages/complete-document-state-answer-message'
+export { encodeDocumentDeletedMessage } from './messages/document-deleted-message'
+export { encodeMetadataUpdatedMessage } from './messages/metadata-updated-message'
+export { encodeServerVersionUpdatedMessage } from './messages/server-version-updated-message'
+
 export { WebsocketTransporter } from './websocket-transporter'
 
 export type { MessageTransporterEvents } from './y-doc-message-transporter'
