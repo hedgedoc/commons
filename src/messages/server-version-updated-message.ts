@@ -7,6 +7,6 @@
 import { MessageType } from './message-type.enum'
 import { encodeGenericMessage } from './generic-message'
 
-export function encodeReadyRequestMessage(): Uint8Array {
-  return encodeGenericMessage(MessageType.READY_REQUEST)
+export function encodeServerVersionUpdatedMessage(): Uint8Array {
+  return encodeGenericMessage(MessageType.SERVER_VERSION_UPDATED)
 }

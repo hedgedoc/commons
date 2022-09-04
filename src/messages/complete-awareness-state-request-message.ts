@@ -5,10 +5,8 @@
  */
 
 import { MessageType } from './message-type.enum'
-import { createEncoder, toUint8Array, writeVarUint } from 'lib0/encoding'
+import { encodeGenericMessage } from './generic-message'
 
 export function encodeCompleteAwarenessStateRequestMessage(): Uint8Array {
-  const encoder = createEncoder()
-  writeVarUint(encoder, MessageType.COMPLETE_AWARENESS_STATE_REQUEST)
-  return toUint8Array(encoder)
+  return encodeGenericMessage(MessageType.COMPLETE_AWARENESS_STATE_REQUEST)
 }

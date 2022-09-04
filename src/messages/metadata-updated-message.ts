@@ -3,10 +3,9 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-
 import { MessageType } from './message-type.enum'
 import { encodeGenericMessage } from './generic-message'
 
-export function encodeReadyRequestMessage(): Uint8Array {
-  return encodeGenericMessage(MessageType.READY_REQUEST)
+export function encodeMetadataUpdatedMessage(): Uint8Array {
+  return encodeGenericMessage(MessageType.METADATA_UPDATED)
 }
