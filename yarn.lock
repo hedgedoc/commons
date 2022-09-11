@@ -457,7 +457,7 @@ __metadata:
   resolution: "@hedgedoc/realtime@workspace:."
   dependencies:
     "@digitak/tsc-esm": 3.1.4
-    "@jest/types": 29.0.2
+    "@jest/types": 29.0.3
     "@types/ws": 8.5.3
     "@typescript-eslint/eslint-plugin": 5.36.2
     "@typescript-eslint/parser": 5.36.2
@@ -747,7 +747,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:29.0.2, @jest/types@npm:^29.0.2":
+"@jest/types@npm:29.0.3":
+  version: 29.0.3
+  resolution: "@jest/types@npm:29.0.3"
+  dependencies:
+    "@jest/schemas": ^29.0.0
+    "@types/istanbul-lib-coverage": ^2.0.0
+    "@types/istanbul-reports": ^3.0.0
+    "@types/node": "*"
+    "@types/yargs": ^17.0.8
+    chalk: ^4.0.0
+  checksum: 3bd33e64d87a5421b860396ac7f7b9b8d5abbf0f300f4379bb20c8e3a6169fbbd078933ce0649827cd63e23330c4effeb6b222fa94e8dd0df638dfff6c1fed41
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^29.0.2":
   version: 29.0.2
   resolution: "@jest/types@npm:29.0.2"
   dependencies:
