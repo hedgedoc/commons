@@ -469,7 +469,7 @@ __metadata:
     jest: 29.0.3
     lib0: ^0.2.51
     prettier: 2.7.1
-    ts-jest: 29.0.0
+    ts-jest: 29.0.1
     typed-emitter: ^2.0.0
     typescript: 4.8.3
     ws: ^8.0.0
@@ -747,7 +747,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:29.0.3":
+"@jest/types@npm:29.0.3, @jest/types@npm:^29.0.3":
   version: 29.0.3
   resolution: "@jest/types@npm:29.0.3"
   dependencies:
@@ -772,20 +772,6 @@ __metadata:
     "@types/yargs": ^17.0.8
     chalk: ^4.0.0
   checksum: f093f4548f8022f5ac9d1edf712edbb5c8edb101017f4afd95b9f9eb978328d099dcb77e2f1893a6dfeb9a7dfdd6cc589b2d83829490cee7e9afa9166c2945bd
-  languageName: node
-  linkType: hard
-
-"@jest/types@npm:^29.0.3":
-  version: 29.0.3
-  resolution: "@jest/types@npm:29.0.3"
-  dependencies:
-    "@jest/schemas": ^29.0.0
-    "@types/istanbul-lib-coverage": ^2.0.0
-    "@types/istanbul-reports": ^3.0.0
-    "@types/node": "*"
-    "@types/yargs": ^17.0.8
-    chalk: ^4.0.0
-  checksum: 3bd33e64d87a5421b860396ac7f7b9b8d5abbf0f300f4379bb20c8e3a6169fbbd078933ce0649827cd63e23330c4effeb6b222fa94e8dd0df638dfff6c1fed41
   languageName: node
   linkType: hard
 
@@ -4290,9 +4276,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:29.0.0":
-  version: 29.0.0
-  resolution: "ts-jest@npm:29.0.0"
+"ts-jest@npm:29.0.1":
+  version: 29.0.1
+  resolution: "ts-jest@npm:29.0.1"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
@@ -4319,7 +4305,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: f4e811aa910b7cd2ef6a9269700dda17ccf253ebdb6ba9e596982d238292d6482973e670e7a6875209e7d246cdf575d79590fc503e12e9368e9105d1d74f09fc
+  checksum: f126675beb0d103d440b0297dc331ce37ba0f1e1a8002f4e97bfeb9043cf21b4de03deebf11ac1f08b7e4978d87f6a1c71e398b1c2f8535df3b684338786408e
   languageName: node
   linkType: hard
 
