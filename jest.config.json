@@ -1,21 +1,25 @@
 {
-  "preset": "ts-jest",
-  "transform": {
-    "^.+\\.tsx?$": "ts-jest"
-  },
-  "testEnvironment": "node",
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-  "testPathIgnorePatterns": [
+  "testRegex" : "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "testPathIgnorePatterns" : [
     "/dist/"
   ],
-  "moduleFileExtensions": [
+  "moduleFileExtensions" : [
     "ts",
     "tsx",
     "js"
   ],
-  "globals": {
-    "ts-jest": {
-      "tsconfig": "tsconfig-cjs.json"
-    }
+  "extensionsToTreatAsEsm" : [
+    ".ts"
+  ],
+  "moduleNameMapper" : {
+    "^(\\.{1,2}/.*)\\.js$" : "$1"
+  },
+  "transform" : {
+    "^.+\\.tsx?$" : [
+      "ts-jest",
+      {
+        "useESM" : true
+      }
+    ]
   }
 }
